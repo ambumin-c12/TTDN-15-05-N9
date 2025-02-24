@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Menu gốc -->
+        <menuitem
+            id="menu_root"
+            name="QLNS"
+            sequence="0"
+            web_icon="your_module/static/description/icon.png"/>
+
+        <!-- Menu Quản lý Nhân viên -->
+        <menuitem name="Quản lý nhân viên" 
+            id="menu_nhan_vien" 
+            parent="menu_root" 
+            sequence="1"
+            action="action_nhan_vien"/>
+
+        <!-- Menu Quản lý Phòng ban -->
+        <menuitem name="Quản lý phòng ban" 
+            id="menu_phong_ban" 
+            parent="menu_root" 
+            sequence="2"
+            action="action_phong_ban"/>
+    </data>
+</odoo>
