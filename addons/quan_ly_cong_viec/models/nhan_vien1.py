@@ -1,8 +1,8 @@
 from odoo import models, fields, api
 
 
-class NhanVien(models.Model):
-    _name = 'nhan_vien'
+class NhanVien1(models.Model):
+    _name = 'nhan_vien1'
     _description = 'Bảng chứa thông tin nhân viên'
 
     ma_dinh_danh = fields.Char("Mã định danh", required=True)

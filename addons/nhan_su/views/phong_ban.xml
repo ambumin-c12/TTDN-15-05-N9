@@ -34,12 +34,13 @@
         <record model="ir.ui.view" id="phong_ban_search">
             <field name="model">phong_ban</field>
             <field name="arch" type="xml">
-                <search>
-                    <field name="ma_phong_ban"/>
-                    <field name="ten_phong_ban"/>
-                </search>
+                <searchpanel>
+                    <field name="ma_phong_ban" select="multi"/>
+                    <field name="ten_phong_ban" select ="multi"/>
+                </searchpanel>
             </field>
         </record>
+
 
         <!-- Action for PhongBan -->
         <record id="action_phong_ban" model="ir.actions.act_window">
