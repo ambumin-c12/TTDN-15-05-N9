@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data>
-        <record id="view_cong_viec_form" model="ir.ui.view">
-            <field name="name">cong_viec</field>
-            <field name="model">cong_viec</field>
+        <record id="view_Chi_Tiet_Cong_Viec_form" model="ir.ui.view">
+            <field name="name">Chi_Tiet_Cong_Viec</field>
+            <field name="model">Chi_Tiet_Cong_Viec</field>
             <field name="arch" type="xml">
                 <form>
                     <sheet>
@@ -19,9 +19,9 @@
             </field>
         </record>
 
-        <record id="view_cong_viec_tree" model="ir.ui.view">
-            <field name="name">cong_viec</field>
-            <field name="model">cong_viec</field>
+        <record id="view_Chi_Tiet_Cong_Viec_tree" model="ir.ui.view">
+            <field name="name">Chi_Tiet_Cong_Viec</field>
+            <field name="model">Chi_Tiet_Cong_Viec</field>
             <field name="arch" type="xml">
                 <tree>
                     <field name="ma_dinh_danh"/>
@@ -32,8 +32,8 @@
             </field>
         </record>
 
-        <record model="ir.ui.view" id="cong_viec_search">
-            <field name="model">cong_viec_search</field>
+        <record model="ir.ui.view" id="Chi_Tiet_Cong_Viec_search">
+            <field name="model">Chi_Tiet_Cong_Viec_search</field>
             <field name="arch" type="xml">
                 <search>
                     <field name="ma_dinh_danh"/>
@@ -44,7 +44,7 @@
             </field>
         </record>
 
-        <record id="action_cong_viecviec" model="ir.actions.act_window">
+        <record id="action_Chi_Tiet_Cong_Viec" model="ir.actions.act_window">
             <field name="name">Công việc</field>
             <field name="res_model">cong_viec</field>
             <field name="view_mode">tree,form</field>
