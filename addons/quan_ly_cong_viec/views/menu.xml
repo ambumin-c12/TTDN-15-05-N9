@@ -15,5 +15,41 @@
             sequence="1"
             action="action_nhan_vien1"/>
 
+                <!-- Menu Quản lý Nhân viên -->
+        <menuitem name="Quản lý Công việc" 
+            id="menu_cong_viec" 
+            parent="menu_root" 
+            sequence="1"
+            action="action_cong_viec"/>
+
+                        <!-- Menu Quản lý Nhân viên -->
+        <menuitem name="Quản lý chi tiết công việc" 
+            id="menu_cong_viec" 
+            parent="menu_root" 
+            sequence="1"
+            action="action_chi_tiet_cong_viec"/>
+
+                        <!-- Menu Quản lý Nhân viên -->
+        <menuitem name="Quản lý Bình luận" 
+            id="menu_Binh_Luan" 
+            parent="menu_root" 
+            sequence="1"
+            action="action_Binh_Luan"/>
+
+                        <!-- Menu Quản lý Nhân viên -->
+        <menuitem name="Quản lý Dự Án" 
+            id="menu_Du_An" 
+            parent="menu_root" 
+            sequence="1"
+            action="action_Du_An"/>
+
+                        <!-- Menu Quản lý Nhân viên -->
+        <menuitem name="Quản lý File" 
+            id="menu_File" 
+            parent="menu_root" 
+            sequence="1"
+            action="action_File"/>
+
+
     </data>
 </odoo>

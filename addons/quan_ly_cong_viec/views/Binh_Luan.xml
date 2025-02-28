@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_Binh_Luan_form" model="ir.ui.view">
+            <field name="name">Binh_Luan</field>
+            <field name="model">Binh_Luan</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <div class="oe_read_only" style="font-size:25px">Binh Luan</div>
+                        <group col="4" string="Thông tin chung">
+                            <field name="ma_Binh_Luan"/>
+                            <field name="cong_viec_LQuan"/>
+                            <field name="nguoi_BL"/>
+                            <field name="noi_dung"/>
+                            <field name="ngay_dang"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_Binh_Luan_tree" model="ir.ui.view">
+            <field name="name">Binh_Luan</field>
+            <field name="model">Binh_Luan</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="ma_dinh_danh"/>
+                    <field name="ngay_tao"/>
+                    <field name="noi_lam"/>
+                    <field name="so_nguoi"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="Binh_Luan_search">
+            <field name="model">Binh_Luan_search</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="ma_dinh_danh"/>
+                    <field name="ngay_sinh"/>
+                    <field name="que_quan"/>
+                    <field name="email"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="action_Binh_Luan" model="ir.actions.act_window">
+            <field name="name">Công việc</field>
+            <field name="res_model">cong_viec</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref = "cong_viecviec_search"/>
+        </record>
+    </data>
+</odoo>
+        
+    
