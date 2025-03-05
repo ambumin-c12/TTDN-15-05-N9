@@ -8,12 +8,13 @@
             sequence="0"
             web_icon="your_module/static/description/icon.png"/>
 
-        <!-- Menu Quản lý Nhân viên -->
-        <menuitem name="Quản lý nhân sự" 
-            id="menu_nhan_vien1" 
-            parent="menu_root" 
-            sequence="1"
-            action="action_nhan_vien1"/>
-
+        
+        <!-- Menu Công việc -->
+        <menuitem
+            id="menu_task"
+            name="Công việc"
+            parent="menu_root"
+            sequence="2"
+            action="action_task"/>
     </data>
 </odoo>

@@ -3,23 +3,26 @@
     <data>
         <!-- Menu gốc -->
         <menuitem
-            id="menu_root"
+            id="menu_nhan_su"
             name="QLNS"
             sequence="0"
             web_icon="your_module/static/description/icon.png"/>
 
-        <!-- Menu Quản lý Nhân viên -->
-        <menuitem name="Quản lý nhân viên" 
-            id="menu_nhan_vien" 
-            parent="menu_root" 
+        <!-- Menu Phòng ban -->
+        <menuitem
+            id="menu_department"
+            name="Phòng ban"
+            parent="menu_nhan_su"
             sequence="1"
-            action="action_nhan_vien"/>
+            action="action_department"/>
 
-        <!-- Menu Quản lý Phòng ban -->
-        <menuitem name="Quản lý phòng ban" 
-            id="menu_phong_ban" 
-            parent="menu_root" 
+        <!-- Menu Nhân viên -->
+        <menuitem
+            id="menu_employee"
+            name="Nhân viên"
+            parent="menu_nhan_su"
             sequence="2"
-            action="action_phong_ban"/>
+            action="action_employee"/>
+
     </data>
 </odoo>
