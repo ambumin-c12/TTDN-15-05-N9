@@ -1,0 +1,40 @@
+<odoo>
+    <record id="view_binhluan_form" model="ir.ui.view">
+        <field name="name">binhluan.form</field>
+        <field name="model">binhluan</field>
+        <field name="arch" type="xml">
+            <form string="Bình Luận">
+                <sheet>
+                    <group>
+                        <field name="ma_binh_luan" readonly="1"/>
+                        <field name="ma_cong_viec"/>
+                        <field name="ma_dinh_danh" readonly="1"/>
+                        <field name="noi_dung"/>
+                        <field name="ngay_dang"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_binhluan_tree" model="ir.ui.view">
+        <field name="name">binhluan.tree</field>
+        <field name="model">binhluan</field>
+        <field name="arch" type="xml">
+            <tree string="Danh Sách Bình Luận">
+                <field name="ma_binh_luan"/>
+                <field name="ma_cong_viec"/>
+                <field name="ma_dinh_danh"/>
+                <field name="noi_dung"/>
+                <field name="ngay_dang"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_binhluan" model="ir.actions.act_window">
+        <field name="name">Bình Luận</field>
+        <field name="res_model">binhluan</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+</odoo>

@@ -1,54 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data>
-        <record id="view_cong_viec_form" model="ir.ui.view">
-            <field name="name">cong_viec</field>
-            <field name="model">cong_viec</field>
+        <record id="view_FileFile_form" model="ir.ui.view">
+            <field name="name">File</field>
+            <field name="model">file</field>
             <field name="arch" type="xml">
                 <form>
                     <sheet>
-                        <div class="oe_read_only" style="font-size:25px">Công việc</div>
+                        <div class="oe_read_only" style="font-size:25px">File</div>
                         <group col="4" string="Thông tin chung">
-                            <field name="ma_dinh_danh"/>
-                            <field name="ngay_sinh"/>
-                            <field name="que_quan"/>
-                            <field name="email"/>
+                            <field name="ma_file"/>
+                            <field name="ten_file"/>
+                            <field name="cong_viec_LQ"/>
+                            <field name="nguoi_tai_len"/>
+                            <field name="duong_dan_luu_file"/>
                         </group>
                     </sheet>
                 </form>
             </field>
         </record>
 
-        <record id="view_cong_viec_tree" model="ir.ui.view">
-            <field name="name">cong_viec</field>
-            <field name="model">cong_viec</field>
+        <record id="view_File_tree" model="ir.ui.view">
+            <field name="name">File</field>
+            <field name="model">file</field>
             <field name="arch" type="xml">
                 <tree>
-                    <field name="ma_dinh_danh"/>
-                    <field name="ngay_tao"/>
-                    <field name="noi_lam"/>
-                    <field name="so_nguoi"/>
+                        <field name="ma_file"/>
+                        <field name="ten_file"/>
+                        <field name="cong_viec_LQ"/>
+                        <field name="nguoi_tai_len"/>
+                        <field name="duong_dan_luu_file"/>
                 </tree>
             </field>
         </record>
 
-        <record model="ir.ui.view" id="cong_viec_search">
-            <field name="model">cong_viec_search</field>
+        <record model="ir.ui.view" id="File_search">
+            <field name="model">file</field>
             <field name="arch" type="xml">
                 <search>
-                    <field name="ma_dinh_danh"/>
-                    <field name="ngay_sinh"/>
-                    <field name="que_quan"/>
-                    <field name="email"/>
+                        <field name="ma_file"/>
+                        <field name="ten_file"/>
+                        <field name="cong_viec_LQ"/>
+                        <field name="nguoi_tai_len"/>
+                        <field name="duong_dan_luu_file"/>
                 </search>
             </field>
         </record>
 
-        <record id="action_cong_viecviec" model="ir.actions.act_window">
-            <field name="name">Công việc</field>
-            <field name="res_model">cong_viec</field>
+        <record id="action_File" model="ir.actions.act_window">
+            <field name="name">File</field>
+            <field name="res_model">file</field>
             <field name="view_mode">tree,form</field>
-            <field name="search_view_id" ref = "cong_viecviec_search"/>
+            <field name="search_view_id" ref = "File_search"/>
         </record>
     </data>
 </odoo>

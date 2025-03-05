@@ -3,16 +3,16 @@
     <data>
         <record id="view_cong_viec_form" model="ir.ui.view">
             <field name="name">cong_viec</field>
-            <field name="model">cong_viec</field>
+            <field name="model">congviec</field>
             <field name="arch" type="xml">
                 <form>
                     <sheet>
                         <div class="oe_read_only" style="font-size:25px">Công việc</div>
                         <group col="4" string="Thông tin chung">
-                            <field name="ma_dinh_danh"/>
-                            <field name="ngay_sinh"/>
-                            <field name="que_quan"/>
-                            <field name="email"/>
+                            <field name="ma_cong_viec"/>
+                            <field name="ten_cong_viec"/>
+                            <field name="ngay_tao"/>
+                            <field name="ngay_ket_thuc"/>
                         </group>
                     </sheet>
                 </form>
@@ -21,34 +21,34 @@
 
         <record id="view_cong_viec_tree" model="ir.ui.view">
             <field name="name">cong_viec</field>
-            <field name="model">cong_viec</field>
+            <field name="model">congviec</field>
             <field name="arch" type="xml">
                 <tree>
-                    <field name="ma_dinh_danh"/>
-                    <field name="ngay_tao"/>
-                    <field name="noi_lam"/>
-                    <field name="so_nguoi"/>
+                        <field name="ma_cong_viec"/>
+                        <field name="ten_cong_viec"/>
+                        <field name="ngay_tao"/>
+                        <field name="ngay_ket_thuc"/>
                 </tree>
             </field>
         </record>
 
         <record model="ir.ui.view" id="cong_viec_search">
-            <field name="model">cong_viec_search</field>
+            <field name="model">congviec</field>
             <field name="arch" type="xml">
                 <search>
-                    <field name="ma_dinh_danh"/>
-                    <field name="ngay_sinh"/>
-                    <field name="que_quan"/>
-                    <field name="email"/>
+                        <field name="ma_cong_viec"/>
+                        <field name="ten_cong_viec"/>
+                        <field name="ngay_tao"/>
+                        <field name="ngay_ket_thuc"/>
                 </search>
             </field>
         </record>
 
         <record id="action_cong_viec" model="ir.actions.act_window">
             <field name="name">Công việc</field>
-            <field name="res_model">cong_viec</field>
+            <field name="res_model">congviec</field>
             <field name="view_mode">tree,form</field>
-            <field name="search_view_id" ref = "cong_viecviec_search"/>
+            <field name="search_view_id" ref = "cong_viec_search"/>
         </record>
     </data>
 </odoo>
