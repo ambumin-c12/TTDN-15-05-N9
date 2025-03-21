@@ -1,3 +1,4 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_nhan_vien1,nhan_vien1.nhan_vien1,model_nhan_vien1,base.group_user,1,1,1,1
 access_task_user,task.user,model_task,base.group_user,1,1,1,1
+access_my_task_user,my.task.user,model_my_task,base.group_user,1,1,1,1

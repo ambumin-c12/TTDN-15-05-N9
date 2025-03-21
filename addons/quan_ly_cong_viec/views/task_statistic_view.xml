@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Graph View -->
+        <record id="view_task_statistic_graph" model="ir.ui.view">
+            <field name="name">task.statistic.graph</field>
+            <field name="model">task</field>
+            <field name="arch" type="xml">
+                <graph type="bar" string="Thống kê công việc theo trạng thái">
+                    <field name="state" type="row"/>
+                    <field name="progress" type="measure" string="Tiến độ trung bình"/>
+                </graph>
+            </field>
+        </record>
+
+        <!-- Pivot View -->
+        <record id="view_task_statistic_pivot" model="ir.ui.view">
+            <field name="name">task.statistic.pivot</field>
+            <field name="model">task</field>
+            <field name="arch" type="xml">
+                <pivot string="Bảng thống kê công việc">
+                    <field name="state" type="row"/>
+                    <field name="department_id" type="col"/>
+                    <field name="progress" type="measure"/>
+                    <field name="name" type="measure" operator="count" string="Số công việc"/>
+                </pivot>
+            </field>
+        </record>
+
+        <!-- Action -->
+        <record id="action_task_statistic" model="ir.actions.act_window">
+            <field name="name">Thống kê công việc</field>
+            <field name="res_model">task</field>
+            <field name="view_mode">graph,pivot</field>
+            <field name="view_id" ref="view_task_statistic_graph"/>
+        </record>
+
+        <!-- Menu -->
+        <!-- <menuitem
+            id="menu_task_statistic"
+            name="Thống kê"
+            parent="menu_root"
+            sequence="2"
+            action="action_task_statistic"/> -->
+    </data>
+</odoo>

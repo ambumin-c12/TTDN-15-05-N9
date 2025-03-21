@@ -3,18 +3,33 @@
     <data>
         <!-- Menu gốc -->
         <menuitem
-            id="menu_root"
+            id="menu_root1"
             name="QLCV"
             sequence="0"
-            web_icon="your_module/static/description/icon.png"/>
+            web_icon="quan_ly_cong_viec/static/description/icon.png"/>
 
-        
         <!-- Menu Công việc -->
         <menuitem
             id="menu_task"
             name="Công việc"
-            parent="menu_root"
-            sequence="2"
+            parent="menu_root1"
+            sequence="1"
             action="action_task"/>
+
+        <!-- Menu Thống kê -->
+        <menuitem
+            id="menu_task_statistic"
+            name="Thống kê"
+            parent="menu_root1"
+            sequence="2"
+            action="action_task_statistic"/>
+
+        <!-- Menu Công việc của tôi -->
+        <menuitem
+            id="menu_my_tasks"
+            name="Công việc của tôi"
+            parent="menu_root1"
+            sequence="3"
+            action="action_my_tasks"/>
     </data>
 </odoo>

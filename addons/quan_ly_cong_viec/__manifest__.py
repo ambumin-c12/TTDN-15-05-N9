@@ -20,17 +20,21 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base'],
+    'depends': ['base', 'mail'],
 
     # always loaded
     'data': [
         'security/ir.model.access.csv',
         'views/task_view.xml',
-        'views/nhan_vien1.xml',
+        'views/task_statistic_view.xml',
+        'views/my_tasks_view.xml',
         'views/menu.xml',
     ],
     # only loaded in demonstration mode
     'demo': [
         'demo/demo.xml',
     ],
+    'installable': True,
+    'application': True,
+    'post_init_hook': 'post_init_hook',
 }

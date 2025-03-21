@@ -16,8 +16,14 @@
                             <field name="deadline"/>
                         </group>
                         <group col="4" string="Chi tiết">
-                            <field name="state"/>
-                            <field name="member_ids" widget="many2many_tags"/>
+                            <field name="progress"/> <!-- Thêm trường tiến độ -->
+                            <field name="state" invisible="1"/>
+                            <div>
+                                <span t-if="record.state == 'draft'" style="color: gray;">Nháp</span>
+                                <span t-if="record.state == 'in_progress'" style="color: blue;">Đang thực hiện</span>
+                                <span t-if="record.state == 'done'" style="color: green;">Hoàn thành</span>
+                            </div>
+                            <field name="member_ids"/>
                             <field name="description" colspan="4"/>
                         </group>
                     </sheet>
@@ -35,6 +41,7 @@
                     <field name="department_id"/>
                     <field name="leader_id"/>
                     <field name="deadline"/>
+                    <field name="progress"/> <!-- Thêm tiến độ vào Tree -->
                     <field name="state"/>
                 </tree>
             </field>
@@ -49,6 +56,7 @@
                     <field name="department_id"/>
                     <field name="leader_id"/>
                     <field name="deadline"/>
+                    <field name="progress"/> <!-- Thêm vào tìm kiếm -->
                     <field name="state"/>
                     <field name="member_ids"/>
                 </search>
