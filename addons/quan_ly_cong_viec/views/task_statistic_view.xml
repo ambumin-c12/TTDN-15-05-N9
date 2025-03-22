@@ -34,13 +34,5 @@
             <field name="view_mode">graph,pivot</field>
             <field name="view_id" ref="view_task_statistic_graph"/>
         </record>
-
-        <!-- Menu -->
-        <!-- <menuitem
-            id="menu_task_statistic"
-            name="Thống kê"
-            parent="menu_root"
-            sequence="2"
-            action="action_task_statistic"/> -->
     </data>
 </odoo>
